@@ -15,9 +15,9 @@ public class Waypoint : MonoBehaviour
     public Vector3 offset;
     public float triggerDistance;
 
-    private bool playedAnimation;
+    protected bool playedAnimation;
 
-    public void Initialize(Transform target, Transform parent, float triggerDistance=15)
+    public virtual void Initialize(Transform target, Transform parent, float triggerDistance=15)
     {
         Camera[] cameras = FindObjectsOfType<Camera>();
 
@@ -34,15 +34,14 @@ public class Waypoint : MonoBehaviour
         this.parent = parent;
         this.triggerDistance = triggerDistance;
     }
-    public void PlayAnimation()
+    protected void PlayAnimation()
     {
         if (playedAnimation) return;
 
         playedAnimation = true;
         GetComponent<Animator>().Play("Fade");
     }
-
-    private void Update()
+    protected void UpdateLogic()
     {
         float minX = img.GetPixelAdjustedRect().width / 2;
         float maxX = Screen.width - minX;
@@ -55,7 +54,7 @@ public class Waypoint : MonoBehaviour
 
         if (Vector3.Dot(target.position - mainCam.transform.position, mainCam.transform.forward) < 0)
         {
-            if(pos.x < Screen.width / 2)
+            if (pos.x < Screen.width / 2)
             {
                 pos.x = maxX;
             }
@@ -70,9 +69,14 @@ public class Waypoint : MonoBehaviour
 
         img.transform.position = pos;
 
-        if(Vector3.Distance(target.position, parent.position) < triggerDistance)
+        if (Vector3.Distance(target.position, parent.position) < triggerDistance)
         {
             PlayAnimation();
         }
+    }
+
+    private void Update()
+    {
+        UpdateLogic();
     }
 }

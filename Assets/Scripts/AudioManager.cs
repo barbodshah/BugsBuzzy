@@ -34,6 +34,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] deathClips;
     public AudioClip[] footsteps;
     public AudioClip[] playerPain;
+    public AudioClip[] explosionSounds;
+    public AudioClip[] grenadeSounds;
+    public AudioClip[] metalHitSounds;
 
     public AudioSource playerAudioSource;
 
@@ -102,6 +105,18 @@ public class AudioManager : MonoBehaviour
     public void AK47Clip(AudioSource source)
     {
         source.PlayOneShot(akClip, volume);
+    }
+    public void MetalHitClip(AudioSource source)
+    {
+        source.PlayOneShot(metalHitSounds[Random.Range(0, metalHitSounds.Length)], volume);
+    }
+    public void PlayExplosionSound()
+    {
+        playerAudioSource.PlayOneShot(explosionSounds[Random.Range(0, explosionSounds.Length)], volume);
+    }
+    public void PlayGrenadeSound()
+    {
+        playerAudioSource.PlayOneShot(grenadeSounds[Random.Range(0, grenadeSounds.Length)], volume);
     }
     public void PlayMinigunCooldown()
     {

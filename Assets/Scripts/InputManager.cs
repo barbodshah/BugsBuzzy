@@ -76,6 +76,15 @@ public class InputManager : MonoBehaviour
             hold = Input.GetMouseButton(0);
 
             reloading = Input.GetKeyDown(KeyCode.R);
+
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                UIController.instance.UseTimeFreeze();
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                UIController.instance.UseGrenade();
+            }
         }
     }
 

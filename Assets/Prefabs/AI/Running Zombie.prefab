@@ -201,6 +201,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -407,6 +408,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -677,6 +679,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1317,6 +1320,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 3
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1360,7 +1364,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2889368238681184957}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1656,6 +1660,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 3
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2086,6 +2091,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
   health: 100
   dead: 0
   destroyAfterDeath: 0
@@ -2120,7 +2128,7 @@ AudioSource:
   m_GameObject: {fileID: 4732966948937795415}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7574558361591633393, guid: 1516b9a4f70848c4c91f6c5a389edaea, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2448,6 +2456,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2686,6 +2695,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2930,6 +2940,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 100
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3214,6 +3225,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3577,6 +3589,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3909,6 +3922,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4113,6 +4127,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4319,6 +4334,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4525,6 +4541,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4763,6 +4780,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []

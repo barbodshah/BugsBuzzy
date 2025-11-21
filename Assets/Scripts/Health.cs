@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
     public DamagePoint torso;
 
-    public UnityEvent deathEvent;
+    public UnityEvent deathEvent, damageEvent;
     public float health;
 
     public bool dead = false;
@@ -17,11 +17,10 @@ public class Health : MonoBehaviour
 
     public void AddHealth(float amount)
     {
-        print("ab" + health + " " + amount);
         if (dead) return;
 
+        damageEvent.Invoke();
         health += amount;
-        print("abc" + health + " " + amount);
 
         if(health <= 0)
         {
@@ -31,7 +30,6 @@ public class Health : MonoBehaviour
     public void Bleed()
     {
         if (dead) return;
-
         torso.Bleed();
     }
     void Death()

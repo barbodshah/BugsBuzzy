@@ -127,7 +127,8 @@ public class Zombie : MonoBehaviour
         }
         else
         {
-            targetEnemy.GetComponent<SoldierAI>().Death();
+            //targetEnemy.GetComponent<SoldierAI>().Death();
+            targetEnemy.GetComponent<Health>().AddHealth(-zombieDamage);
         }
     }
     public void Death()

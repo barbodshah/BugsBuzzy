@@ -9,6 +9,7 @@ public class DamagePoint : MonoBehaviour
     public float damageMultiplier;
 
     public GameObject bloodPrefab;
+    public bool mechanical;
 
     public UnityEvent hitEvent;
 
@@ -24,7 +25,7 @@ public class DamagePoint : MonoBehaviour
         if(health.health > 0 && health.health <= damage * damageMultiplier)
         {
             hitEvent.Invoke();
-            AudioManager.instance.PlayDeathSound(GetComponentInParent<AudioSource>());
+            if(!mechanical) AudioManager.instance.PlayDeathSound(GetComponentInParent<AudioSource>());
         }
 
         health.AddHealth(-damageMultiplier * damage);

@@ -40,6 +40,8 @@ public class UIController : MonoBehaviour
     [Header("HUD")]
     public GameObject PlayerDeathScreen;
     public GameObject ShootButton;
+    public GameObject ReloadButton;
+    public GameObject AimButton;
     public GameObject Crosshair;
     public bloodSplatter bloodSplatter;
 
@@ -82,7 +84,9 @@ public class UIController : MonoBehaviour
 
         if (InputManager.Instance.pc)
         {
-            ShootButton.gameObject.SetActive(false);
+            ShootButton.SetActive(false);
+            ReloadButton.SetActive(false);
+            AimButton.SetActive(false);
         }
         //ScaleUI();
 
@@ -159,7 +163,8 @@ public class UIController : MonoBehaviour
         else if(cannonController.activeWeapon is ReloadableWeapon)
         {
             ReloadableWeapon reloadableWeapon = (ReloadableWeapon)cannonController.activeWeapon;
-            ammo.text = reloadableWeapon.currentAmmo.ToString() + " / " + reloadableWeapon.initialAmmo.ToString();
+            //ammo.text = reloadableWeapon.currentAmmo.ToString() + " / " + reloadableWeapon.initialAmmo.ToString();
+            ammo.text = reloadableWeapon.currentAmmo.ToString();
         }
 
         //WaveText.gameObject.SetActive(LevelManager.instance.inWaveWait && SettingPanel.activeInHierarchy == false);

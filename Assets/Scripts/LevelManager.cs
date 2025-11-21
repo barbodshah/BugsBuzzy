@@ -7,7 +7,9 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public List<Zombie> zombies = new List<Zombie>();
+    public List<AIDrone> drones = new List<AIDrone>();
     public List<Transform> Humans = new List<Transform>();
+    public List<Health> targets = new List<Health>();
 
     public static int MAX_ZOMBIES = 25;
     public static float BACKUP_COOLDOWN = 120;
@@ -102,6 +104,24 @@ public class LevelManager : MonoBehaviour
                 newWave();
             }
         }
+
+        if(targets.Count != 0)
+        {
+            bool alive = false;
+
+            foreach (var target in targets)
+            {
+                if(target.dead == false)
+                {
+                    alive = true;
+                    break;
+                }
+            }
+            if(!alive)
+            {
+                PlayerDead();
+            }
+        }
     }
     #region WaveMode
     void newWave()
@@ -173,6 +193,9 @@ public class LevelManager : MonoBehaviour
     }
     public void PlayerDead()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
         if (playerDead) return;
         playerDead = true;
 

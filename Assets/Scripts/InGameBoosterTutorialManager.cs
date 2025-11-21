@@ -34,6 +34,9 @@ public class InGameBoosterTutorialManager : MonoBehaviour
             tutorialPanel.SetActive(true);
             FindObjectOfType<SpawnController>().enabled = false;
 
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+
             stage1();
         }
     }
@@ -63,5 +66,8 @@ public class InGameBoosterTutorialManager : MonoBehaviour
         PlayerPrefs.Save();
 
         FindObjectOfType<SpawnController>().enabled = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

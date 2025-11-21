@@ -266,6 +266,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -414,6 +415,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
   health: 500
   dead: 0
   destroyAfterDeath: 0
@@ -448,7 +452,7 @@ AudioSource:
   m_GameObject: {fileID: 695918976324557645}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7574558361591633393, guid: 1516b9a4f70848c4c91f6c5a389edaea, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -774,6 +778,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1041,6 +1046,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 2
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1245,6 +1251,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1587,6 +1594,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1863,6 +1871,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 5
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2313,6 +2322,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2549,6 +2559,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2817,6 +2828,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 2
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3327,6 +3339,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3795,6 +3808,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4036,6 +4050,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4536,6 +4551,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4987,6 +5003,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5195,6 +5212,7 @@ MonoBehaviour:
   health: {fileID: 0}
   damageMultiplier: 1
   bloodPrefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  mechanical: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls: []

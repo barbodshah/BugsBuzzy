@@ -6,7 +6,6 @@ public class HandAnimator : MonoBehaviour
 {
     public Animator handAnim;
     public FPSWalkerEnhanced walkerEnhanced;
-    public FPSController fPSController;
 
     [SerializeField] float speedTarget = 1;
     [SerializeField] float currentSpeed = 1;

@@ -10,6 +10,7 @@ public class Grenade : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        AudioManager.instance.PlayGrenadeSound();
         Destroy(gameObject);
         GameObject go = Instantiate(particleEffect, transform.position, transform.rotation);
 
