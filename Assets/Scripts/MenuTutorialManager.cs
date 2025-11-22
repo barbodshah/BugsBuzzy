@@ -116,5 +116,7 @@ public class MenuTutorialManager : MonoBehaviour
         PlayerPrefs.Save();
 
         backHand.SetActive(true);
+
+        FindObjectOfType<BoosterTutorialManager>().stage1();
     }
 }

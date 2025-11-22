@@ -18,6 +18,8 @@ public class InputManager : MonoBehaviour
     CameraController controller;
     CannonController cannonController;
 
+    public GameObject BoosterTutorial;
+
     public bool pc;
 
     private void Awake()
@@ -67,6 +69,25 @@ public class InputManager : MonoBehaviour
         }
         else
         {
+            if (BoosterTutorial.activeInHierarchy) return;
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (UIController.instance.SettingPanel.activeInHierarchy)
+                {
+                    UIController.instance.CloseSetting();
+                    //Cursor.lockState = CursorLockMode.Locked;
+                    //Cursor.visible = false;
+                }
+                else
+                {
+                    UIController.instance.OpenSetting();
+                    Cursor.lockState = CursorLockMode.Confined;
+                    Cursor.visible = true;
+                }
+            }
+            if (UIController.instance.SettingPanel.activeInHierarchy) return;
+
             aiming = Input.GetMouseButtonDown(1);
 
             mouseX = Input.GetAxis("Mouse X");

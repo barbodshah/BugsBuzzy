@@ -37,6 +37,9 @@ public class StartMenuController : MonoBehaviour
     public RTLTextMeshPro waveHighScorePersian;
     public TMP_Text hardcoreHighScore;
 
+    [Header("Music")]
+    public AudioSource audioSource;
+
 
     void Start()
     {
@@ -46,6 +49,8 @@ public class StartMenuController : MonoBehaviour
     {
         gemAmount.text = GameController.instance.Gems.ToString();
         gemAmount2.text = GameController.instance.Gems.ToString();
+
+        audioSource.volume = GameController.instance.Volume;
     }
     IEnumerator startWait()
     {
@@ -142,6 +147,10 @@ public class StartMenuController : MonoBehaviour
     {
         GameController.instance.AddGem(1);
         SetShopValues();
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     #endregion
     #region WeaponSelectMenu

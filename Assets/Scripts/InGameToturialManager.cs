@@ -111,33 +111,33 @@ public class InGameToturialManager : MonoBehaviour
     void stage1()
     {
         ToggleGoArray(cameraMovementGO, true);
-        cameraMovementTut.text = "برای حرکت دوربین، انگشتت رو روی صفحه حرکت بده";
+        cameraMovementTut.text = "برای حرکت دوربین موس رو تکون بده و برای حرکت کردن از دکمه های wasd استفاده کن";
     }
     void stage2()
     {
         ToggleGoArray(shootTutGO, true);
-        shootTutText.text = "برای شلیک، اینجا کلیک کن";
+        shootTutText.text = "برای شلیک، دکمه چپ موس رو بزن";
     }
     void stage3()
     {
         ToggleGoArray(aimTutGO, true);
-        aimTutText.text = "برای نشونه گیری، این دکمه رو بزن";
+        aimTutText.text = "برای نشونه گیری، دکمه راست موس رو بزن";
     }
     void stage4()
     {
         settingButton.SetActive(true);
         settingTutGO.SetActive(true);
 
-        settingTutHand1.SetActive(true);
+        //settingTutHand1.SetActive(true);
 
-        settingTutText.text = "برای تغییر تنظیمات کلیک کن";
+        settingTutText.text = "برای تغییر تنظیمات دکمه esc رو بزن";
     }
     void stage5()
     {
-        settingTutHand2.SetActive(false);
+        //settingTutHand2.SetActive(false);
 
         killZombieGO.SetActive(true);
-        killZombieText.text = "یه زامبی داره به سمتت حمله میکنه! منتظرش باش و وقتی به تو نزدیک شد اونو بکش!";
+        killZombieText.text = "یه فضایی داره بهت نزدیک میشه! بهش شلیک کن و خلاصش کن";
 
         GameObject go = Instantiate(runningZombie, spawnPosition.position, Quaternion.identity);
         currentZombie = go.GetComponent<Zombie>();
@@ -147,7 +147,7 @@ public class InGameToturialManager : MonoBehaviour
     void stage6()
     {
         ToggleGoArray(reloadTutGO, true);
-        reloadTutText.text = "برای خشاب گذاری این دکمه رو بزن";
+        reloadTutText.text = "برای خشاب گذاری دکمه R رو بزن";
     }
     void tutorialEnd()
     {
@@ -157,7 +157,7 @@ public class InGameToturialManager : MonoBehaviour
         LevelManager.instance.kills = 0;
 
         tutorialEndGO.SetActive(true);
-        tutorialEndText.text = "حالا دیگه برای کشتن زامبی ها آماده ای! بزن بریم!";
+        tutorialEndText.text = "حالا دیگه برای کشتن فضایی ها آماده ای! بزن بریم!";
 
         StartCoroutine(tutorialEndTimer());
     }
@@ -167,6 +167,8 @@ public class InGameToturialManager : MonoBehaviour
         tutorialEndGO.SetActive(false);
 
         tutStage = -1;
+
+        AudioManager.instance.IntroDialogue();
     }
     #endregion
     int GetTutStage()
@@ -184,10 +186,8 @@ public class InGameToturialManager : MonoBehaviour
     {
         if (tutStage == 0)
         {
-            float x = cameraController.transform.eulerAngles.x;
-            float y = cameraController.transform.eulerAngles.y;
-
-            if (Mathf.Abs(x) >= 20 || Mathf.Abs(y - 90) >= 20)
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)
+                || Input.GetKeyDown(KeyCode.A))
             {
                 tutStage++;
 
@@ -279,7 +279,7 @@ public class InGameToturialManager : MonoBehaviour
                 if (Vector3.Distance(cameraController.transform.position, currentZombie.transform.position) <= triggerDistance)
                 {
                     subTutStage++;
-                    killZombieText.text = "یه زامبی داره بهت نزدیک میشه! بهش شلیک کن و خلاصش کن";
+                    killZombieText.text = "یه فضایی داره بهت نزدیک میشه! بهش شلیک کن و خلاصش کن";
                 }
             }
         }

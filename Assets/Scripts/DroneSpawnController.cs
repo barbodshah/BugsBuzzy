@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DroneSpawnController : MonoBehaviour
 {
+    public string DroneTutorialKey = "DroneTutorial";
+
     public GameObject dronePrefab;
     public Transform droneSpawnPosition;
 
@@ -20,6 +22,12 @@ public class DroneSpawnController : MonoBehaviour
     }
     void SpawnDrone()
     {
+        if(PlayerPrefs.GetInt(DroneTutorialKey, 0) == 0)
+        {
+            PlayerPrefs.SetInt(DroneTutorialKey, 1);
+            AudioManager.instance.DroneDialogue();
+        }
+
         Instantiate(dronePrefab, droneSpawnPosition.position, droneSpawnPosition.rotation);
         StartCoroutine(spawnWait());
     }

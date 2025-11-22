@@ -8,6 +8,16 @@ public class Grenade : MonoBehaviour
     public float effectiveRange;
     public float grenadeForce;
 
+    private void Awake()
+    {
+        StartCoroutine(activateCollider());
+    }
+    IEnumerator activateCollider()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<Collider>().enabled = true;    
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         AudioManager.instance.PlayGrenadeSound();

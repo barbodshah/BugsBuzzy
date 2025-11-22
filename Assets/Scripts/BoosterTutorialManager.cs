@@ -22,7 +22,7 @@ public class BoosterTutorialManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt(BuyBoosterTutorial, 0) != 0 || PlayerPrefs.GetInt(BuyWeaponTutorial, 0) == 0)
         {
-            Destroy(this);
+            //Destroy(this);
         }
         else
         {
@@ -53,12 +53,12 @@ public class BoosterTutorialManager : MonoBehaviour
             boosterTutorialText.gameObject.SetActive(false);
         }
     }
-    void stage1()
+    public void stage1()
     {
         buyBombHand.SetActive(true);
         buyTimeFreezeHand.SetActive(true);
         boosterTutorialText.gameObject.SetActive(true);
 
-        boosterTutorialText.text = "با خرید تقویت کننده ها، زامبی هارو راحت بکش!";
+        boosterTutorialText.text = "با خرید تقویت کننده ها، فضایی هارو راحت بکش!";
     }
 }

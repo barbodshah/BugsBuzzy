@@ -38,7 +38,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] grenadeSounds;
     public AudioClip[] metalHitSounds;
 
+    public AudioClip[] objectiveDials;
+    public AudioClip droneDial;
+    public AudioClip introDial;
+
     public AudioSource playerAudioSource;
+    public AudioSource musicAudioSource;
 
     public int maxSimultaneousMoans = 3;
     private int currentMoans = 0;
@@ -129,6 +134,18 @@ public class AudioManager : MonoBehaviour
     public void PlayDeathSound(AudioSource source)
     {
         playerAudioSource.PlayOneShot(deathClips[Random.Range(0, deathClips.Length)], volume);
+    }
+    public void ObjectiveDestroyed(int index)
+    {
+        playerAudioSource.PlayOneShot(objectiveDials[index], volume);
+    }
+    public void DroneDialogue()
+    {
+        playerAudioSource.PlayOneShot(droneDial, volume);
+    }
+    public void IntroDialogue()
+    {
+        playerAudioSource.PlayOneShot(introDial, volume);
     }
     public void SMGReload(AudioSource source)
     {

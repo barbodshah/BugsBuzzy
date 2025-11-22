@@ -37,7 +37,7 @@ public class FPSInputManager : MonoBehaviour
     IEnumerator sf()
     {
         yield return null;
-        UIControllerFPS.instance.fPSCamera.mouseSensitivity *= 100;
+        //UIControllerFPS.instance.fPSCamera.mouseSensitivity *= 100;
     }
 
     private void Update()

@@ -19,10 +19,10 @@ public class Health : MonoBehaviour
     {
         if (dead) return;
 
-        damageEvent.Invoke();
         health += amount;
+        damageEvent.Invoke();
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Death();
         }

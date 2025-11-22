@@ -37,7 +37,7 @@ public static class Vibration
 #else
     public static void Vibrate(long milliseconds)
     {
-        Handheld.Vibrate(); // fallback
+        //Handheld.Vibrate(); // fallback
     }
 #endif
 }

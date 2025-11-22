@@ -20,15 +20,15 @@ public class Waypoint : MonoBehaviour
     public virtual void Initialize(Transform target, Transform parent, float triggerDistance=15)
     {
         Camera[] cameras = FindObjectsOfType<Camera>();
-
-        foreach (Camera cam in cameras)
+        mainCam = Camera.main;
+        /*foreach (Camera cam in cameras)
         {
             if (cam.enabled)
             {
                 mainCam = cam;
                 break;
             }
-        }
+        }*/
 
         this.target = target;
         this.parent = parent;

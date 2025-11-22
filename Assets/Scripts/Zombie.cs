@@ -138,6 +138,7 @@ public class Zombie : MonoBehaviour
         foreach (Rigidbody rigidbody in rigidbodies)
         {
             rigidbody.isKinematic = false;
+            rigidbody.gameObject.layer = LayerMask.NameToLayer("DeadBody");
         }
         dead = true;
 

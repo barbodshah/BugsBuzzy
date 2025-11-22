@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
         LoadOrInitialize(savedTimeFreeze, ref TimeFreeze);
         LoadOrInitialize(savedGrenades, ref Grenades);
         LoadOrInitialize(savedWeaponIndex, ref WeaponIndex, 0);
-        LoadOrInitialize(savedSensitivity, ref Sensitivity, 3);
+        LoadOrInitialize(savedSensitivity, ref Sensitivity, 50);
         LoadOrInitialize(savedVibration, ref Vibration, 1);
         LoadOrInitialize(savedVolume, ref Volume, 1f);
     }

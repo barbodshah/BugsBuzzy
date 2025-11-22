@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
     public TMP_Text killText;
     public TMP_Text playerHealth;
     public GameObject ScorePanel;
+    public GameObject RetryButton;
 
     [Header("Special Abilities")]
     public TMP_Text grenadeText;
@@ -187,6 +188,15 @@ public class UIController : MonoBehaviour
 
     public void PlayerDead()
     {
+        if(PlayerPrefs.GetInt("BuyWeaponTutorial", 0) == 0)
+        {
+            RetryButton.SetActive(false);
+        }
+        else
+        {
+            RetryButton.SetActive(true);
+        }
+
         PlayerDeathScreen.SetActive(true);
 
         if (GameController.instance.waveMode)
@@ -238,6 +248,9 @@ public class UIController : MonoBehaviour
     }
     public void CloseSetting()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         SettingButton.SetActive(true);
         //SettingPanel.SetActive(false);
 
@@ -266,6 +279,8 @@ public class UIController : MonoBehaviour
     public void ChangeVolume()
     {
         AudioManager.instance.volume = volumeSlider.value;
+        AudioManager.instance.musicAudioSource.volume = volumeSlider.value * 0.32f;
+
         GameController.instance.SetVolume(volumeSlider.value);
     }
     public void ToggleVibration()
